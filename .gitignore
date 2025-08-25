@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+.env
+
+# VSCode
+.vscode/
+
+# Data artifacts
+data/interim/
+data/processed/
+data/index/
+data/raw/source.pdf
+
+# Caches
+.cache/
+huggingface/

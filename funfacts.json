@@ -1,0 +1,765 @@
+[
+  {
+    "id": "GF_FACT_PROP_001",
+    "text_content": "Gather Foods is a majority Aboriginal-owned business.",
+    "category": [
+      "Company Overview",
+      "Heritage",
+      "Ownership"
+    ],
+    "keywords": [
+      "Aboriginal-owned",
+      "indigenous business",
+      "Gather Foods",
+      "ownership"
+    ],
+    "hypothetical_questions": [
+      "Who owns Gather Foods?",
+      "Is Gather Foods an Indigenous-owned business?",
+      "What is the ownership structure of Gather Foods?"
+    ],
+    "trigger_phrases": [
+      "who owns Gather Foods",
+      "Aboriginal-owned",
+      "indigenous business"
+    ],
+    "sentiment": "positive",
+    "display_context": [
+      "general_chat",
+      "about_query",
+      "company_values"
+    ],
+    "source_doc": "Gather Foods Fun Facts"
+  },
+  {
+    "id": "GF_FACT_PROP_002",
+    "text_content": "Gather Foods combines 60,000 years of indigenous knowledge with modern entrepreneurial innovation to create unique products.",
+    "category": [
+      "Product Philosophy",
+      "Innovation",
+      "Heritage"
+    ],
+    "keywords": [
+      "indigenous knowledge",
+      "entrepreneurial innovation",
+      "unique products",
+      "Gather Foods"
+    ],
+    "hypothetical_questions": [
+      "How does Gather Foods incorporate indigenous knowledge?",
+      "What is unique about Gather Foods’ products?",
+      "What is Gather Foods’ innovation approach?"
+    ],
+    "trigger_phrases": [
+      "indigenous knowledge",
+      "modern innovation",
+      "unique products"
+    ],
+    "sentiment": "positive",
+    "display_context": [
+      "product_discussion",
+      "company_values",
+      "about_query"
+    ],
+    "source_doc": "Gather Foods Fun Facts"
+  },
+  {
+    "id": "GF_FACT_PROP_003",
+    "text_content": "Gather Foods’ products are inspired by native Australian ingredients and bush tucker.",
+    "category": [
+      "Product Philosophy",
+      "Ingredients"
+    ],
+    "keywords": [
+      "native Australian ingredients",
+      "bush tucker",
+      "product inspiration",
+      "Gather Foods"
+    ],
+    "hypothetical_questions": [
+      "What ingredients does Gather Foods use?",
+      "Are Gather Foods’ products made with bush tucker?",
+      "What is the inspiration behind Gather Foods’ products?"
+    ],
+    "trigger_phrases": [
+      "bush tucker",
+      "native ingredients",
+      "product inspiration"
+    ],
+    "sentiment": "positive",
+    "display_context": [
+      "product_discussion",
+      "about_query",
+      "general_chat"
+    ],
+    "source_doc": "Gather Foods Fun Facts"
+  },
+  {
+    "id": "GF_FACT_PROP_004",
+    "text_content": "Gather Foods was crowned \"Best Condiments & Ice Cream Company Australia 2023.\"",
+    "category": [
+      "Awards",
+      "Recognition"
+    ],
+    "keywords": [
+      "Best Condiments & Ice Cream Company Australia 2023",
+      "Gather Foods award",
+      "condiments ice cream"
+    ],
+    "hypothetical_questions": [
+      "Did Gather Foods win any awards in 2023?",
+      "What award did Gather Foods win in 2023?",
+      "Was Gather Foods named best condiments & ice cream company?"
+    ],
+    "trigger_phrases": [
+      "award 2023",
+      "best condiments ice cream",
+      "Gather Foods award"
+    ],
+    "sentiment": "positive",
+    "display_context": [
+      "awards",
+      "about_query",
+      "general_chat"
+    ],
+    "source_doc": "Gather Foods Fun Facts"
+  },
+  {
+    "id": "GF_FACT_PROP_005",
+    "text_content": "Gather Foods received the LUXLife Food and Hospitality Award.",
+    "category": [
+      "Awards",
+      "Recognition"
+    ],
+    "keywords": [
+      "LUXLife Food and Hospitality Award",
+      "Gather Foods award",
+      "prestigious award"
+    ],
+    "hypothetical_questions": [
+      "Has Gather Foods won the LUXLife Food and Hospitality Award?",
+      "What is the LUXLife award that Gather Foods received?",
+      "Which award did Gather Foods get from LUXLife?"
+    ],
+    "trigger_phrases": [
+      "LUXLife Award",
+      "prestigious award",
+      "Gather Foods recognition"
+    ],
+    "sentiment": "positive",
+    "display_context": [
+      "awards",
+      "about_query"
+    ],
+    "source_doc": "Gather Foods Fun Facts"
+  },
+  {
+    "id": "GF_FACT_PROP_006",
+    "text_content": "Gather Foods received the Judges' Award at the Belmont & WA Small Business Awards.",
+    "category": [
+      "Awards",
+      "Recognition"
+    ],
+    "keywords": [
+      "Judges' Award",
+      "Belmont Small Business Awards",
+      "WA Small Business Awards",
+      "Gather Foods"
+    ],
+    "hypothetical_questions": [
+      "What Judges' Award did Gather Foods win?",
+      "Did Gather Foods win at the Belmont & WA Small Business Awards?",
+      "Which small business award did Gather Foods get?"
+    ],
+    "trigger_phrases": [
+      "Judges' Award",
+      "Belmont WA Awards",
+      "Gather Foods awards"
+    ],
+    "sentiment": "positive",
+    "display_context": [
+      "awards",
+      "about_query"
+    ],
+    "source_doc": "Gather Foods Fun Facts"
+  },
+  {
+    "id": "GF_FACT_PROP_007",
+    "text_content": "Gather Foods is the first company in Australia to create native-inspired ice cream.",
+    "category": [
+      "Products",
+      "Innovation",
+      "Milestones"
+    ],
+    "keywords": [
+      "first native-inspired ice cream",
+      "Gather Foods",
+      "Australia ice cream pioneers",
+      "native-inspired"
+    ],
+    "hypothetical_questions": [
+      "Who first made native-inspired ice cream in Australia?",
+      "Is Gather Foods a pioneer in native-inspired ice cream?",
+      "What makes Gather Foods’ ice cream unique?"
+    ],
+    "trigger_phrases": [
+      "first native-inspired ice cream",
+      "Australia pioneer ice cream",
+      "Gather Foods ice cream"
+    ],
+    "sentiment": "positive",
+    "display_context": [
+      "product_discussion",
+      "milestones",
+      "about_query"
+    ],
+    "source_doc": "Gather Foods Fun Facts"
+  },
+  {
+    "id": "GF_FACT_PROP_008",
+    "text_content": "Gather Foods offers native-inspired ice cream flavors such as chocolate wattleseed and cookies & cream.",
+    "category": [
+      "Products",
+      "Flavors",
+      "Innovation"
+    ],
+    "keywords": [
+      "chocolate wattleseed",
+      "cookies & cream",
+      "native-inspired ice cream",
+      "Gather Foods flavors"
+    ],
+    "hypothetical_questions": [
+      "What flavors does Gather Foods ice cream have?",
+      "Does Gather Foods make chocolate wattleseed ice cream?",
+      "Which ice cream flavors are offered by Gather Foods?"
+    ],
+    "trigger_phrases": [
+      "chocolate wattleseed",
+      "cookies & cream",
+      "native-inspired ice cream"
+    ],
+    "sentiment": "positive",
+    "display_context": [
+      "product_discussion",
+      "menu_inquiry"
+    ],
+    "source_doc": "Gather Foods Fun Facts"
+  },
+  {
+    "id": "GF_FACT_PROP_009",
+    "text_content": "Gather Foods’ native-inspired ice cream is available through pop-up carts and selected stores nationwide.",
+    "category": [
+      "Products",
+      "Distribution",
+      "Availability"
+    ],
+    "keywords": [
+      "pop-up carts",
+      "selected stores",
+      "nationwide availability",
+      "Gather Foods ice cream"
+    ],
+    "hypothetical_questions": [
+      "Where can I buy Gather Foods ice cream?",
+      "Is Gather Foods ice cream sold in stores?",
+      "How is Gather Foods ice cream distributed?"
+    ],
+    "trigger_phrases": [
+      "pop-up carts",
+      "selected stores",
+      "nationwide"
+    ],
+    "sentiment": "positive",
+    "display_context": [
+      "product_discussion",
+      "availability"
+    ],
+    "source_doc": "Gather Foods Fun Facts"
+  },
+  {
+    "id": "GF_FACT_PROP_010",
+    "text_content": "Gather Foods’ gourmet hampers are named after Noongar seasons, such as \"Birak\" which is a summer BBQ theme.",
+    "category": [
+      "Products",
+      "Cultural Themes",
+      "Heritage"
+    ],
+    "keywords": [
+      "Noongar seasons",
+      "Birak",
+      "summer BBQ hamper",
+      "Gather Foods"
+    ],
+    "hypothetical_questions": [
+      "What is Birak hamper?",
+      "Are Gather Foods hampers named after Noongar seasons?",
+      "What does Birak signify for Gather Foods hampers?"
+    ],
+    "trigger_phrases": [
+      "Birak",
+      "Noongar seasons",
+      "summer BBQ theme"
+    ],
+    "sentiment": "positive",
+    "display_context": [
+      "product_discussion",
+      "company_values"
+    ],
+    "source_doc": "Gather Foods Fun Facts"
+  },
+  {
+    "id": "GF_FACT_PROP_011",
+    "text_content": "Gather Foods’ gourmet hampers include \"Djeran\", a gin hamper themed for a Noongar season.",
+    "category": [
+      "Products",
+      "Cultural Themes",
+      "Heritage"
+    ],
+    "keywords": [
+      "Djeran",
+      "gin hamper",
+      "Noongar season",
+      "Gather Foods"
+    ],
+    "hypothetical_questions": [
+      "What is the Djeran hamper?",
+      "Does Gather Foods have a gin hamper?",
+      "Are Gather Foods hampers themed around Noongar seasons?"
+    ],
+    "trigger_phrases": [
+      "Djeran",
+      "gin hamper",
+      "Noongar season"
+    ],
+    "sentiment": "positive",
+    "display_context": [
+      "product_discussion",
+      "company_values"
+    ],
+    "source_doc": "Gather Foods Fun Facts"
+  },
+  {
+    "id": "GF_FACT_PROP_012",
+    "text_content": "Naming hampers after Noongar seasons showcases indigenous culture through food experiences.",
+    "category": [
+      "Company Values",
+      "Cultural Heritage",
+      "Products"
+    ],
+    "keywords": [
+      "indigenous culture",
+      "Noongar seasons",
+      "food experiences",
+      "Gather Foods"
+    ],
+    "hypothetical_questions": [
+      "Why are Gather Foods hampers named after Noongar seasons?",
+      "How does Gather Foods showcase indigenous culture?",
+      "What is the significance of hamper themes at Gather Foods?"
+    ],
+    "trigger_phrases": [
+      "indigenous culture",
+      "Noongar seasons",
+      "cultural heritage"
+    ],
+    "sentiment": "inspirational",
+    "display_context": [
+      "company_values",
+      "social_impact"
+    ],
+    "source_doc": "Gather Foods Fun Facts"
+  },
+  {
+    "id": "GF_FACT_PROP_013",
+    "text_content": "Gather Foods was founded in 2016 in Perth.",
+    "category": [
+      "Company Overview",
+      "History",
+      "Operations"
+    ],
+    "keywords": [
+      "founded 2016",
+      "Perth",
+      "Gather Foods history",
+      "company founding"
+    ],
+    "hypothetical_questions": [
+      "When was Gather Foods founded?",
+      "Where was Gather Foods founded?",
+      "What is the origin of Gather Foods?"
+    ],
+    "trigger_phrases": [
+      "founded 2016",
+      "Perth",
+      "company founded"
+    ],
+    "sentiment": "neutral",
+    "display_context": [
+      "about_query",
+      "company overview"
+    ],
+    "source_doc": "Gather Foods Fun Facts"
+  },
+  {
+    "id": "GF_FACT_PROP_014",
+    "text_content": "Gather Foods distributes its products across Australia.",
+    "category": [
+      "Operations",
+      "Distribution",
+      "Geography"
+    ],
+    "keywords": [
+      "distribution Australia",
+      "Gather Foods availability",
+      "nationwide distribution",
+      "Australia"
+    ],
+    "hypothetical_questions": [
+      "Does Gather Foods distribute nationwide?",
+      "Where does Gather Foods ship its products?",
+      "Is Gather Foods distribution limited to Australia?"
+    ],
+    "trigger_phrases": [
+      "distributes across Australia",
+      "nationwide distribution",
+      "Australia"
+    ],
+    "sentiment": "neutral",
+    "display_context": [
+      "availability",
+      "product_discussion"
+    ],
+    "source_doc": "Gather Foods Fun Facts"
+  },
+  {
+    "id": "GF_FACT_PROP_015",
+    "text_content": "Gather Foods has plans to expand globally to bring their \"taste of Australia\" to international customers.",
+    "category": [
+      "Company Strategy",
+      "Expansion",
+      "Global"
+    ],
+    "keywords": [
+      "global expansion",
+      "taste of Australia",
+      "international plans",
+      "Gather Foods"
+    ],
+    "hypothetical_questions": [
+      "Is Gather Foods expanding internationally?",
+      "What are Gather Foods’ global plans?",
+      "Will Gather Foods sell products overseas?"
+    ],
+    "trigger_phrases": [
+      "global expansion",
+      "international customers",
+      "taste of Australia"
+    ],
+    "sentiment": "positive",
+    "display_context": [
+      "company_strategy",
+      "about_query"
+    ],
+    "source_doc": "Gather Foods Fun Facts"
+  },
+  {
+    "id": "GF_FACT_PROP_016",
+    "text_content": "Gather Foods’ client roster includes BHP.",
+    "category": [
+      "Clients",
+      "Corporate Partnerships",
+      "Operations"
+    ],
+    "keywords": [
+      "BHP",
+      "corporate clients",
+      "Gather Foods clients",
+      "partnerships"
+    ],
+    "hypothetical_questions": [
+      "Does Gather Foods serve BHP?",
+      "Who are Gather Foods’ corporate clients?",
+      "What big companies use Gather Foods?"
+    ],
+    "trigger_phrases": [
+      "BHP",
+      "corporate client",
+      "Gather Foods"
+    ],
+    "sentiment": "positive",
+    "display_context": [
+      "client_discussion",
+      "about_query"
+    ],
+    "source_doc": "Gather Foods Fun Facts"
+  },
+  {
+    "id": "GF_FACT_PROP_017",
+    "text_content": "Gather Foods’ client roster includes Rio Tinto.",
+    "category": [
+      "Clients",
+      "Corporate Partnerships",
+      "Operations"
+    ],
+    "keywords": [
+      "Rio Tinto",
+      "corporate clients",
+      "Gather Foods clients",
+      "partnerships"
+    ],
+    "hypothetical_questions": [
+      "Is Rio Tinto a client of Gather Foods?",
+      "Which mining companies use Gather Foods?",
+      "Who are Gather Foods’ top corporate clients?"
+    ],
+    "trigger_phrases": [
+      "Rio Tinto",
+      "corporate client",
+      "Gather Foods"
+    ],
+    "sentiment": "positive",
+    "display_context": [
+      "client_discussion",
+      "about_query"
+    ],
+    "source_doc": "Gather Foods Fun Facts"
+  },
+  {
+    "id": "GF_FACT_PROP_018",
+    "text_content": "Gather Foods’ client roster includes Synergy.",
+    "category": [
+      "Clients",
+      "Corporate Partnerships",
+      "Operations"
+    ],
+    "keywords": [
+      "Synergy",
+      "corporate clients",
+      "Gather Foods clients",
+      "partnerships"
+    ],
+    "hypothetical_questions": [
+      "Is Synergy a client of Gather Foods?",
+      "Which energy companies use Gather Foods?",
+      "Who are Gather Foods’ corporate partners?"
+    ],
+    "trigger_phrases": [
+      "Synergy",
+      "corporate client",
+      "Gather Foods"
+    ],
+    "sentiment": "positive",
+    "display_context": [
+      "client_discussion",
+      "about_query"
+    ],
+    "source_doc": "Gather Foods Fun Facts"
+  },
+  {
+    "id": "GF_FACT_PROP_019",
+    "text_content": "Gather Foods’ client roster includes the Perth Mint.",
+    "category": [
+      "Clients",
+      "Corporate Partnerships",
+      "Operations"
+    ],
+    "keywords": [
+      "Perth Mint",
+      "corporate clients",
+      "Gather Foods clients",
+      "partnerships"
+    ],
+    "hypothetical_questions": [
+      "Does the Perth Mint use Gather Foods?",
+      "Who is Gather Foods’ client?",
+      "What notable clients does Gather Foods have?"
+    ],
+    "trigger_phrases": [
+      "Perth Mint",
+      "corporate client",
+      "Gather Foods"
+    ],
+    "sentiment": "positive",
+    "display_context": [
+      "client_discussion",
+      "about_query"
+    ],
+    "source_doc": "Gather Foods Fun Facts"
+  },
+  {
+    "id": "GF_FACT_PROP_020",
+    "text_content": "Serving major corporations like BHP, Rio Tinto, Synergy, and the Perth Mint demonstrates Gather Foods’ capability to deliver premium corporate catering and events.",
+    "category": [
+      "Company Capability",
+      "Clients",
+      "Operations"
+    ],
+    "keywords": [
+      "premium corporate catering",
+      "Gather Foods capability",
+      "major corporate clients",
+      "events"
+    ],
+    "hypothetical_questions": [
+      "What corporate events does Gather Foods cater?",
+      "Can Gather Foods handle large corporate functions?",
+      "Which major companies trust Gather Foods for catering?"
+    ],
+    "trigger_phrases": [
+      "premium corporate catering",
+      "major corporations",
+      "Gather Foods capability"
+    ],
+    "sentiment": "positive",
+    "display_context": [
+      "company_capability",
+      "client_discussion"
+    ],
+    "source_doc": "Gather Foods Fun Facts"
+  },
+  {
+    "id": "GF_FACT_PROP_021",
+    "text_content": "Gather Foods Director Gerry Matera was invited to speak at SXSW Austin, Texas in 2025.",
+    "category": [
+      "Leadership",
+      "Recognition",
+      "Events"
+    ],
+    "keywords": [
+      "Gerry Matera",
+      "SXSW 2025",
+      "Gather Foods director",
+      "international speaker"
+    ],
+    "hypothetical_questions": [
+      "Who from Gather Foods spoke at SXSW 2025?",
+      "Was Gather Foods represented at SXSW 2025?",
+      "Which leader of Gather Foods spoke internationally?"
+    ],
+    "trigger_phrases": [
+      "Gerry Matera SXSW",
+      "2025 speaker",
+      "Gather Foods director"
+    ],
+    "sentiment": "positive",
+    "display_context": [
+      "leadership",
+      "company_recognition"
+    ],
+    "source_doc": "Gather Foods Fun Facts"
+  },
+  {
+    "id": "GF_FACT_PROP_022",
+    "text_content": "At SXSW 2025, Gerry Matera discussed the future of energy and Australian bush foods on an expert panel.",
+    "category": [
+      "Leadership",
+      "Thought Leadership",
+      "Events"
+    ],
+    "keywords": [
+      "future of energy",
+      "Australian bush foods",
+      "expert panel",
+      "SXSW discussion"
+    ],
+    "hypothetical_questions": [
+      "What topic did Gerry Matera speak on at SXSW?",
+      "Did Gather Foods discuss bush foods at SXSW?",
+      "What did Gather Foods’ director talk about at SXSW?"
+    ],
+    "trigger_phrases": [
+      "future of energy",
+      "bush foods panel",
+      "SXSW expert panel"
+    ],
+    "sentiment": "neutral",
+    "display_context": [
+      "company_recognition",
+      "events_info"
+    ],
+    "source_doc": "Gather Foods Fun Facts"
+  },
+  {
+    "id": "GF_FACT_PROP_023",
+    "text_content": "Gather Foods works with at-risk Aboriginal youth through cultural programs.",
+    "category": [
+      "Social Impact",
+      "Programs",
+      "Community Engagement"
+    ],
+    "keywords": [
+      "at-risk Aboriginal youth",
+      "cultural programs",
+      "Gather Foods social impact",
+      "community engagement"
+    ],
+    "hypothetical_questions": [
+      "How does Gather Foods support Aboriginal youth?",
+      "Does Gather Foods run cultural programs?",
+      "What social programs does Gather Foods have?"
+    ],
+    "trigger_phrases": [
+      "at-risk Aboriginal youth",
+      "cultural programs",
+      "social impact"
+    ],
+    "sentiment": "inspirational",
+    "display_context": [
+      "social_impact",
+      "company_values"
+    ],
+    "source_doc": "Gather Foods Fun Facts"
+  },
+  {
+    "id": "GF_FACT_PROP_024",
+    "text_content": "Gather Foods provides employment opportunities for at-risk Aboriginal youth.",
+    "category": [
+      "Social Impact",
+      "Employment",
+      "Community Engagement"
+    ],
+    "keywords": [
+      "employment opportunities",
+      "Aboriginal youth",
+      "Gather Foods social impact",
+      "job programs"
+    ],
+    "hypothetical_questions": [
+      "Does Gather Foods hire Aboriginal youth?",
+      "What employment programs does Gather Foods offer?",
+      "How does Gather Foods help youth find jobs?"
+    ],
+    "trigger_phrases": [
+      "employment opportunities",
+      "Aboriginal youth",
+      "Gather Foods jobs"
+    ],
+    "sentiment": "inspirational",
+    "display_context": [
+      "social_impact",
+      "company_values"
+    ],
+    "source_doc": "Gather Foods Fun Facts"
+  },
+  {
+    "id": "GF_FACT_PROP_025",
+    "text_content": "Gather Foods uses food as a bridge to strengthen connections to land and culture for Aboriginal youth.",
+    "category": [
+      "Social Impact",
+      "Cultural Heritage",
+      "Community Engagement"
+    ],
+    "keywords": [
+      "food bridge",
+      "connections to land",
+      "Aboriginal culture",
+      "Gather Foods mission"
+    ],
+    "hypothetical_questions": [
+      "How does Gather Foods use food in its social mission?",
+      "Why does Gather Foods focus on land and culture?",
+      "What is Gather Foods’ cultural connection strategy?"
+    ],
+    "trigger_phrases": [
+      "food

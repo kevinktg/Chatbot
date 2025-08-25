@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  
+  .voice-circle {
+    @apply w-32 h-32 rounded-full bg-gradient-to-br from-primary-500 to-primary-600 
+           flex items-center justify-center cursor-pointer transition-all duration-300
+           hover:scale-105 hover:shadow-lg hover:shadow-primary-500/50;
+  }
+  
+  .voice-circle.listening {
+    @apply bg-gradient-to-br from-accent-500 to-accent-600 animate-pulse-slow
+           shadow-lg shadow-accent-500/50;
+  }
+  
+  .message-bubble {
+    @apply max-w-xs lg:max-w-md px-4 py-3 rounded-2xl text-sm;
+  }
+  
+  .message-bubble.user {
+    @apply bg-primary-500 text-white ml-auto;
+  }
+  
+  .message-bubble.assistant {
+    @apply bg-white/90 text-gray-800;
+  }
+  
+  .control-button {
+    @apply px-6 py-3 rounded-full bg-white/20 backdrop-blur-sm text-white
+           border border-white/30 transition-all duration-300
+           hover:bg-white/30 hover:scale-105 active:scale-95;
+  }
+  
+  .control-button.active {
+    @apply bg-primary-500/80 border-primary-400;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-wave {
+    animation: wave 2s ease-out infinite;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/20 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-white/30;
+}

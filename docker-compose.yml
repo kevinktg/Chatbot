@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  gather-foods-chatbot:
+    build: .
+    container_name: gather-foods-chatbot
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount data directories for persistence
+      - ./data:/app/data
+      - ./models:/app/models
+    environment:
+      - TRAINING_DEVICE=cpu
+      - PYTHONUNBUFFERED=1
+      - LOG_LEVEL=INFO
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+        reservations:
+          memory: 2G
+
+  # Optional: Add Redis for session management (uncomment if needed)
+  # redis:
+  #   image: redis:7-alpine
+  #   container_name: gather-foods-redis
+  #   ports:
+  #     - "6379:6379"
+  #   volumes:
+  #     - redis_data:/data
+  #   restart: unless-stopped
+
+volumes:
+  redis_data:

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good AI: An Investment in Indigenous Economic Sovereignty</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDF6E3; /* Creamish Background */
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flow-arrow {
+            position: relative;
+            width: 100%;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .flow-arrow::after {
+            content: '▼';
+            font-size: 1.5rem;
+            color: #EB6841;
+        }
+        .flow-arrow-horizontal {
+            position: relative;
+            width: 2rem;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .flow-arrow-horizontal::after {
+            content: '►';
+            font-size: 1.5rem;
+            color: #EB6841;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-black text-[#00A0B0] mb-2">Good AI</h1>
+            <p class="text-xl md:text-2xl font-semibold text-gray-700">An Investment in Indigenous Economic Sovereignty & Digital Futures</p>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="md:col-span-2 lg:col-span-3 bg-white rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center justify-around text-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-lg font-semibold text-gray-600">Projected Year 3 Revenue</p>
+                    <p class="text-6xl font-black text-[#CC333F]">$2.1M</p>
+                </div>
+                <div class="mb-4 md:mb-0">
+                    <p class="text-lg font-semibold text-gray-600">Projected Year 3 EBITDA</p>
+                    <p class="text-6xl font-black text-[#EB6841]">$625K</p>
+                </div>
+                <div class="mb-4 md:mb-0">
+                    <p class="text-lg font-semibold text-gray-600">Core Mission</p>
+                    <p class="text-3xl font-bold text-[#00A0B0]">Digital Sovereignty</p>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 lg:col-span-1 bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-center mb-4 text-[#6A4A3C]">The Perth SME Market Opportunity</h2>
+                <p class="text-gray-600 mb-4 text-center">A focused, data-driven strategy targeting a significant and underserved market, with a unique value proposition to bridge the critical "Sovereignty Gap" for First Nations businesses.</p>
+                <div class="chart-container h-64 md:h-80">
+                    <canvas id="marketOpportunityChart"></canvas>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-center mb-4 text-[#6A4A3C]">The Good AI Ecosystem: An Integrated Model</h2>
+                <p class="text-gray-600 mb-6 text-center">Three distinct divisions work in synergy to provide a holistic, end-to-end pathway to digital empowerment, creating a value proposition stronger than the sum of its parts.</p>
+                <div class="flex flex-col md:flex-row justify-around items-center text-center">
+                    <div class="flex-1 p-4 border-2 border-[#00A0B0] rounded-lg m-2">
+                        <p class="text-2xl mb-2">💡</p>
+                        <h3 class="text-xl font-bold text-[#00A0B0]">Research</h3>
+                        <p class="text-sm">Strategic Insights, Analytics & Training</p>
+                    </div>
+                    <div class="flow-arrow md:hidden"></div>
+                    <div class="flow-arrow-horizontal hidden md:flex"></div>
+                    <div class="flex-1 p-4 border-2 border-[#EB6841] rounded-lg m-2">
+                        <p class="text-2xl mb-2">⚙️</p>
+                        <h3 class="text-xl font-bold text-[#EB6841]">Technology</h3>
+                        <p class="text-sm">Sovereign AI Tools & Platform Development</p>
+                    </div>
+                    <div class="flow-arrow md:hidden"></div>
+                    <div class="flow-arrow-horizontal hidden md:flex"></div>
+                    <div class="flex-1 p-4 border-2 border-[#CC333F] rounded-lg m-2">
+                        <p class="text-2xl mb-2">🎨</p>
+                        <h3 class="text-xl font-bold text-[#CC333F]">Creative</h3>
+                        <p class="text-sm">Web Dev, Design & Youth Training</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 lg:col-span-3 bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-center mb-4 text-[#6A4A3C]">Projected Financial Growth (Consolidated)</h2>
+                <p class="text-gray-600 mb-4 text-center">A robust and sustainable financial model demonstrating a clear path to profitability by Year 1, with strong revenue growth scaling to over $2M by Year 3.</p>
+                <div class="chart-container h-96">
+                    <canvas id="financialGrowthChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="md:col-span-2 lg:col-span-3 bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-center mb-4 text-[#6A4A3C]">Divisional Revenue Contribution</h2>
+                <p class="text-gray-600 mb-4 text-center">A diversified revenue model balances high-value strategic projects, recurring subscription income, and creative implementation work, ensuring financial resilience and stability.</p>
+                <div class="chart-container h-96">
+                    <canvas id="divisionalRevenueChart"></canvas>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 lg:col-span-3 bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-center mb-4 text-[#6A4A3C]">The Synergistic Client Journey</h2>
+                <p class="text-gray-600 mb-6 text-center">Our ecosystem guides partners through a complete lifecycle of digital transformation, creating a self-reinforcing moat built on trust and holistic value delivery.</p>
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-[#00A0B0] mb-2">Scenario 1: The First Nations Startup</h3>
+                        <div class="relative pl-8">
+                            <div class="absolute left-2 top-0 h-full border-l-2 border-dashed border-[#EDC951]"></div>
+                            <div class="relative mb-4">
+                                <div class="absolute -left-5 top-1.5 w-6 h-6 bg-[#00A0B0] rounded-full"></div>
+                                <p><strong>Entry Point (Research):</strong> A Foundation Package provides a data-driven digital strategy and business roadmap.</p>
+                            </div>
+                            <div class="relative mb-4">
+                                <div class="absolute -left-5 top-1.5 w-6 h-6 bg-[#CC333F] rounded-full"></div>
+                                <p><strong>Transition (Creative):</strong> A culturally resonant brand and website are developed, activating the Youth Training Module.</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute -left-5 top-1.5 w-6 h-6 bg-[#EB6841] rounded-full"></div>
+                                <p><strong>Integration (Technology):</strong> A Data Sovereign Chatbot is deployed on the new site to manage bookings and inquiries 24/7.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 lg:col-span-3 bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-center mb-4 text-[#6A4A3C]">12-Month Strategic Roadmap</h2>
+                <p class="text-gray-600 mb-6 text-center">A pragmatic, phased rollout focused on validating the model, building capacity, and delivering immediate value to our foundational partners.</p>
+                <div class="flex flex-col md:flex-row justify-between text-center space-y-4 md:space-y-0 md:space-x-4">
+                    <div class="flex-1 p-4 bg-gray-100 rounded-lg">
+                        <p class="text-sm font-semibold text-gray-500">Months 1-3</p>
+                        <h3 class="text-lg font-bold text-[#00A0B0]">Foundation & MVP</h3>
+                        <p class="text-sm">Secure seed funding, establish Indigenous Advisory Council, and launch MVP services from each division.</p>
+                    </div>
+                    <div class="flex-1 p-4 bg-gray-100 rounded-lg">
+                        <p class="text-sm font-semibold text-gray-500">Months 4-6</p>
+                        <h3 class="text-lg font-bold text-[#EB6841]">Capacity Building</h3>
+                        <p class="text-sm">Hire key personnel and officially launch the Youth Training Module with the first cohort of trainees.</p>
+                    </div>
+                    <div class="flex-1 p-4 bg-gray-100 rounded-lg">
+                        <p class="text-sm font-semibold text-gray-500">Months 7-12</p>
+                        <h3 class="text-lg font-bold text-[#CC333F]">Scale & Impact</h3>
+                        <p class="text-sm">Onboard 10+ new clients and publish the inaugural Community Impact Report.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="text-center mt-12">
+            <p class="text-gray-600">This infographic presents a summary of the Good AI investment proposal. All data is derived from the comprehensive business plan.</p>
+        </footer>
+    </div>
+
+    <script>
+        const wrapLabel = (label, maxWidth = 16) => {
+            const words = label.split(' ');
+            let lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + word).length > maxWidth) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            }
+            lines.push(currentLine.trim());
+            return lines;
+        };
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            } else {
+                return label;
+            }
+        };
+
+        const chartTooltipOptions = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            }
+        };
+
+        const palette = {
+            blue: '#00A0B0',
+            brown: '#6A4A3C',
+            red: '#CC333F',
+            orange: '#EB6841',
+            yellow: '#EDC951',
+            lightGray: '#F3F4F6',
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            const marketCtx = document.getElementById('marketOpportunityChart').getContext('2d');
+            new Chart(marketCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: [
+                        'Serviceable Obtainable Market (SOM): $6.1M',
+                        'Serviceable Addressable Market (SAM): $1.22B',
+                        'Total Addressable Market (TAM): $3.81B',
+                    ],
+                    datasets: [{
+                        label: 'Market Size',
+                        data: [6.1, 1220, 3810],
+                        backgroundColor: [palette.red, palette.orange, palette.blue],
+                        borderColor: '#ffffff',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                        },
+                        title: {
+                            display: false,
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: tooltipTitleCallback,
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed !== null) {
+                                        if (context.dataIndex === 0) {
+                                            label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', notation: 'compact' }).format(context.parsed * 1000000);
+                                        } else {
+                                             label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', notation: 'compact' }).format(context.parsed * 1000000);
+                                        }
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            const financialCtx = document.getElementById('financialGrowthChart').getContext('2d');
+            new Chart(financialCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Year 1', 'Year 2', 'Year 3'],
+                    datasets: [
+                        {
+                            label: 'Total Revenue',
+                            data: [300, 900, 2100],
+                            backgroundColor: palette.blue,
+                            borderColor: palette.blue,
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'Gross Profit',
+                            data: [100, 450, 1150],
+                            backgroundColor: palette.yellow,
+                            borderColor: palette.yellow,
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'EBITDA',
+                            data: [12.5, 175, 625],
+                            backgroundColor: palette.orange,
+                            borderColor: palette.orange,
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return '$' + value + 'K';
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.y !== null) {
+                                        label += '$' + context.parsed.y + 'K';
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            const divisionalCtx = document.getElementById('divisionalRevenueChart').getContext('2d');
+            new Chart(divisionalCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Year 1', 'Year 2', 'Year 3'],
+                    datasets: [
+                        {
+                            label: 'Research',
+                            data: [150, 330, 650],
+                            backgroundColor: palette.blue,
+                        },
+                        {
+                            label: 'Technology',
+                            data: [70, 220, 600],
+                            backgroundColor: palette.orange,
+                        },
+                        {
+                            label: 'Creative',
+                            data: [80, 350, 850],
+                            backgroundColor: palette.red,
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            stacked: true,
+                        },
+                        y: {
+                            stacked: true,
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return '$' + value + 'K';
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.y !== null) {
+                                        label += '$' + context.parsed.y + 'K';
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
