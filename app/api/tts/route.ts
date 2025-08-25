@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
-import ElevenLabs from 'elevenlabs-js'
+import { textToSpeech, setApiKey, getVoices } from 'elevenlabs-js'
 
-// Initialize ElevenLabs client
-const elevenlabs = new ElevenLabs({
-  apiKey: process.env.ELEVENLABS_API_KEY || '',
-})
+// Set ElevenLabs API key
+if (process.env.ELEVENLABS_API_KEY) {
+  setApiKey(process.env.ELEVENLABS_API_KEY)
+}
 
 // Premium voice options for Gather Foods AI
 const VOICE_OPTIONS = {
@@ -71,18 +71,18 @@ export async function POST(request: NextRequest) {
     // Get voice configuration
     const voiceConfig = VOICE_OPTIONS[voice_type as keyof typeof VOICE_OPTIONS] || VOICE_OPTIONS.primary
 
-    // Generate speech with ElevenLabs
-    const audioBuffer = await elevenlabs.generate({
-      text: text,
-      voice_id: voiceConfig.voice_id,
-      model_id: 'eleven_multilingual_v2', // Premium multilingual model
-      voice_settings: {
+    // Generate speech with ElevenLabs using correct API
+    const audioBuffer = await textToSpeech(
+      voiceConfig.voice_id,
+      text,
+      'eleven_multilingual_v2', // Premium multilingual model
+      {
         stability: 0.5,        // Balanced stability
         similarity_boost: 0.75, // Good voice consistency
         style: 0.0,            // Neutral style
         use_speaker_boost: true // Enhanced clarity
       }
-    })
+    )
 
     // Convert to base64 for frontend
     const base64Audio = Buffer.from(audioBuffer).toString('base64')
@@ -111,11 +111,11 @@ export async function POST(request: NextRequest) {
 export async function GET() {
   try {
     // Get available voices from ElevenLabs
-    const voices = await elevenlabs.voices.getAll()
+    const voices = await getVoices()
     
     return NextResponse.json({
       message: 'ElevenLabs TTS Service',
-      available_voices: voices.length,
+      available_voices: voices?.length || 0,
       configured_voices: Object.keys(VOICE_OPTIONS),
       voice_options: VOICE_OPTIONS
     })

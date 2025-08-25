@@ -104,8 +104,8 @@ class GatherFoodsChatbot:
             from transformers import AutoTokenizer, AutoModelForCausalLM
             import torch
             
-            # Use a lightweight model that's good for food/restaurant queries
-            model_name = "microsoft/DialoGPT-small"  # 117MB - much smaller!
+            # Use DialoGPT-medium - better than small, proven to work
+            model_name = "microsoft/DialoGPT-medium"  # 300MB, much better quality
             
             logger.info(f"Loading Hugging Face model: {model_name}")
             
@@ -162,31 +162,36 @@ class GatherFoodsChatbot:
             model = _llm_model["model"]
             device = _llm_model["device"]
             
-            # Create a food-focused system prompt
+            # Create a food-focused system prompt for DialoGPT
             system_prompt = """You are a helpful assistant for Gather Foods, an Aboriginal-owned catering company. 
             Help customers with menu inquiries, dietary requirements, pricing, and company information.
             Be respectful of Aboriginal culture and heritage. Keep responses concise and helpful."""
             
-            # Format input for DialoGPT
-            input_text = f"{system_prompt}\nUser: {prompt}\nAssistant:"
+            # Format input for DialoGPT-medium with better context
+            input_text = f"Context: {system_prompt}\nCustomer: {prompt}\nGather Foods Assistant:"
             
-            # Encode input
+            # Encode input  
             input_ids = tokenizer.encode(input_text, return_tensors="pt").to(device)
             
-            # Generate response
+            # Generate response with better parameters for DialoGPT
             with torch.no_grad():
                 output = model.generate(
                     input_ids,
-                    max_length=input_ids.shape[1] + 128,  # Limit response length
-                    temperature=0.7,
+                    max_length=input_ids.shape[1] + 100,  # Reasonable response length
+                    temperature=0.8,  # Slightly more creative
                     do_sample=True,
                     pad_token_id=tokenizer.eos_token_id,
-                    no_repeat_ngram_size=2
+                    repetition_penalty=1.2,  # Avoid repetition
+                    no_repeat_ngram_size=3
                 )
             
             # Decode response and extract just the assistant's part
             full_response = tokenizer.decode(output[0], skip_special_tokens=True)
-            assistant_response = full_response.split("Assistant:")[-1].strip()
+            # Extract just the assistant's response after the prompt
+            if "Gather Foods Assistant:" in full_response:
+                assistant_response = full_response.split("Gather Foods Assistant:")[-1].strip()
+            else:
+                assistant_response = full_response[len(input_text):].strip()
             
             return assistant_response if assistant_response else "I'm here to help with any questions about Gather Foods!"
             
@@ -610,7 +615,7 @@ async def voice_interface():
         </div>
         
         <div class="status-bar" id="statusBar">
-            🔒 Data-Sovereign AI • Powered by Hugging Face DialoGPT
+            🔒 Data-Sovereign AI • Powered by DialoGPT-Medium
         </div>
 
         <script>
@@ -876,7 +881,7 @@ async def voice_interface():
                         
                         // Update status if context was used
                         if (data.context_used) {
-                            statusBar.textContent = '🔒 Data-Sovereign AI • Using Indigenous Knowledge • Powered by HF DialoGPT';
+                            statusBar.textContent = '🔒 Data-Sovereign AI • Using Indigenous Knowledge • Powered by DialoGPT';
                         }
                         
                         // Speak the response if voice mode is active
