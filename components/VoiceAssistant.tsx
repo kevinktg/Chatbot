@@ -436,7 +436,7 @@ export default function VoiceAssistant({ onMessage }: VoiceAssistantProps) {
         animate={{ opacity: 1, y: 0 }}
         className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-black/70 text-white px-6 py-3 rounded-full backdrop-blur-sm text-sm"
       >
-        🔒 Data-Sovereign AI • 🎤 ElevenLabs Premium Voice • Powered by Local DeepSeek Model
+        🔒 Data-Sovereign AI • 🎤 ElevenLabs Premium Voice • Powered by HF DialoGPT
       </motion.div>
     </div>
   )

@@ -14,8 +14,8 @@ faiss-cpu>=1.8.0.post1
 sentence-transformers>=2.7.0
 transformers>=4.41.0
 
-# Local LLM inference
-llama-cpp-python>=0.2.0
+# Hugging Face LLM inference
+torch>=2.0.0
 
 # PDF processing
 PyPDF2>=3.0.1

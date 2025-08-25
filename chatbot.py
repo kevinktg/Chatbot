@@ -101,25 +101,31 @@ class GatherFoodsChatbot:
         global _llm_model
         
         try:
-            from llama_cpp import Llama
+            from transformers import AutoTokenizer, AutoModelForCausalLM
+            import torch
             
-            model_path = Path("DeepSeek-R1-Distill-Qwen-1.5B-Q4_K_M.gguf")
-            if not model_path.exists():
-                logger.error(f"Model file not found: {model_path}")
-                return
+            # Use a lightweight model that's good for food/restaurant queries
+            model_name = "microsoft/DialoGPT-small"  # 117MB - much smaller!
             
-            _llm_model = Llama(
-                model_path=str(model_path),
-                n_ctx=4096,
-                n_threads=4,
-                n_gpu_layers=0,
-                verbose=False
-            )
+            logger.info(f"Loading Hugging Face model: {model_name}")
             
-            logger.info("Local LLM initialized successfully")
+            _llm_model = {
+                "tokenizer": AutoTokenizer.from_pretrained(model_name),
+                "model": AutoModelForCausalLM.from_pretrained(model_name),
+                "device": "cuda" if torch.cuda.is_available() else "cpu"
+            }
+            
+            # Move model to appropriate device
+            _llm_model["model"].to(_llm_model["device"])
+            
+            # Set pad token if not present
+            if _llm_model["tokenizer"].pad_token is None:
+                _llm_model["tokenizer"].pad_token = _llm_model["tokenizer"].eos_token
+            
+            logger.info(f"HF model initialized successfully on {_llm_model['device']}")
             
         except ImportError:
-            logger.error("llama-cpp-python not installed. Install with: pip install llama-cpp-python")
+            logger.error("transformers not installed. Install with: pip install transformers torch")
         except Exception as e:
             logger.error(f"Failed to initialize LLM: {e}")
     
@@ -150,20 +156,39 @@ class GatherFoodsChatbot:
             return "I'm sorry, but I'm currently unable to generate responses. Please check the system configuration."
         
         try:
-            system_prompt = """You are an advanced AI assistant for Gather Foods, an Aboriginal-owned catering company. 
-            You help customers with menu inquiries, dietary requirements, pricing, and company information.
-            Always be respectful of Aboriginal culture and heritage. Provide accurate, helpful information based on the context provided."""
+            import torch
             
-            full_prompt = f"{system_prompt}\n\n{prompt}"
+            tokenizer = _llm_model["tokenizer"]
+            model = _llm_model["model"]
+            device = _llm_model["device"]
             
-            response = _llm_model(
-                full_prompt,
-                max_tokens=512,
-                temperature=0.7,
-                stop=["User:", "Human:", "\n\n"]
-            )
+            # Create a food-focused system prompt
+            system_prompt = """You are a helpful assistant for Gather Foods, an Aboriginal-owned catering company. 
+            Help customers with menu inquiries, dietary requirements, pricing, and company information.
+            Be respectful of Aboriginal culture and heritage. Keep responses concise and helpful."""
             
-            return response["choices"][0]["text"].strip()
+            # Format input for DialoGPT
+            input_text = f"{system_prompt}\nUser: {prompt}\nAssistant:"
+            
+            # Encode input
+            input_ids = tokenizer.encode(input_text, return_tensors="pt").to(device)
+            
+            # Generate response
+            with torch.no_grad():
+                output = model.generate(
+                    input_ids,
+                    max_length=input_ids.shape[1] + 128,  # Limit response length
+                    temperature=0.7,
+                    do_sample=True,
+                    pad_token_id=tokenizer.eos_token_id,
+                    no_repeat_ngram_size=2
+                )
+            
+            # Decode response and extract just the assistant's part
+            full_response = tokenizer.decode(output[0], skip_special_tokens=True)
+            assistant_response = full_response.split("Assistant:")[-1].strip()
+            
+            return assistant_response if assistant_response else "I'm here to help with any questions about Gather Foods!"
             
         except Exception as e:
             logger.error(f"LLM generation failed: {e}")
@@ -585,7 +610,7 @@ async def voice_interface():
         </div>
         
         <div class="status-bar" id="statusBar">
-            🔒 Data-Sovereign AI • Powered by Local DeepSeek Model
+            🔒 Data-Sovereign AI • Powered by Hugging Face DialoGPT
         </div>
 
         <script>
@@ -851,7 +876,7 @@ async def voice_interface():
                         
                         // Update status if context was used
                         if (data.context_used) {
-                            statusBar.textContent = '🔒 Data-Sovereign AI • Using Indigenous Knowledge • Powered by Local DeepSeek Model';
+                            statusBar.textContent = '🔒 Data-Sovereign AI • Using Indigenous Knowledge • Powered by HF DialoGPT';
                         }
                         
                         // Speak the response if voice mode is active
