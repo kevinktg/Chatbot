@@ -19,3 +19,13 @@ data/raw/source.pdf
 # Caches
 .cache/
 huggingface/
+
+# Model files (large)
+*.gguf
+models/
+node_modules/
+.next/
+package-lock.json
+
+# Next.js
+next-env.d.ts
