@@ -19,7 +19,7 @@
     "tailwindcss": "^3.4.0",
     "autoprefixer": "^10.4.0",
     "postcss": "^8.4.0",
-    "elevenlabs": "^3.0.0"
+    "elevenlabs-js": "^1.2.6"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

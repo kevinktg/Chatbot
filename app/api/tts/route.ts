@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { ElevenLabs } from 'elevenlabs'
+import ElevenLabs from 'elevenlabs-js'
 
 // Initialize ElevenLabs client
 const elevenlabs = new ElevenLabs({
